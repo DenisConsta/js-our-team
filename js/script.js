@@ -2,43 +2,58 @@ const team = [
   {
     name: "Wayne Barnett",
     role: "Founder & CEO",
-    image: "../img/wayne-barnett-founder-ceo.jpg"
+    image: "wayne-barnett-founder-ceo.jpg"
   },
   {
     name: "Angela Caroll",
     role: "Chief Editor",
-    image: "../img/angela-caroll-chief-editor.jpg"
+    image: "angela-caroll-chief-editor.jpg"
   },
   {
     name: "Walter Gordon",
     role: "Office Manager",
-    image: "../img/walter-gordon-office-manager.jpg"
+    image: "walter-gordon-office-manager.jpg"
   },
   {
     name: "Angela Lopez",
     role: "Social Media Manager",
-    image: "../img/angela-lopez-social-media-manager.jpg"
+    image: "angela-lopez-social-media-manager.jpg"
   },
   {
     name: "Scott Estrada",
     role: "Developer",
-    image: "../img/scott-estrada-developer.jpg"
+    image: "scott-estrada-developer.jpg"
   },
   {
     name: "Barbara Ramos",
     role: "Graphic Designer",
-    image: "../img/barbara-ramos-graphic-designer.jpg"
+    image: "barbara-ramos-graphic-designer.jpg"
   }
 ];
 
 const ul = document.createElement('ul');
 document.querySelector('.my-container').append(ul);
 
-for (let person of team) {
-  let li = document.createElement('li');
-    for (let key in person) {
-      li.innerText += ` ${key} : ${person[key]} |`;
-    }
-    ul.appendChild(li);
+initCards();
+
+function initCards(){
+  for(let person of team){
+    document.querySelector('.row').innerHTML += createCard(person);
+  }
+}
+
+function createCard(object) {
+  const card = `
+    <div class="col mb-5 d-flex justify-content-center ">
+      <div class="card" >
+        <img class="card-img-top" src="assets/img/${object.image}" alt="Card image cap">
+        <div class="card-body text-center">
+          <h3 class="name">${object.name}</h3>
+          <h4 class="role lead">${object.role}</h4>
+        </div>
+      </div>
+    </div>
+  `;
+  return card;
 }
 

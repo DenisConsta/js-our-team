@@ -8,6 +8,13 @@
 
 .main-wrapper{
   min-height: 100vh;
-  background-color: #222;
+  background-color: #EBF2FA;
 }
 
+.card{
+  width: 18rem;
+}
+
+.title{
+  color: #05668D;
+}
