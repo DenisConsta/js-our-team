@@ -1,0 +1,13 @@
+:root{
+
+}
+
+.debug{
+  border: 1px solid firebrick;
+}
+
+.main-wrapper{
+  min-height: 100vh;
+  background-color: #222;
+}
+

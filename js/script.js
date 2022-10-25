@@ -31,12 +31,14 @@ const team = [
   }
 ];
 
-for(let person of team){
-  for (let key in person) {
-    console.log(`
-        ${key} : ${person[key]}
-    `);
-  }
-  console.log('----------------------------------------------');
+const ul = document.createElement('ul');
+document.querySelector('.my-container').append(ul);
+
+for (let person of team) {
+  let li = document.createElement('li');
+    for (let key in person) {
+      li.innerText += ` ${key} : ${person[key]} |`;
+    }
+    ul.appendChild(li);
 }
 
