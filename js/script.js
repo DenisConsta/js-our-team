@@ -31,5 +31,12 @@ const team = [
   }
 ];
 
-for(let person of team)
-  console.log(person);
+for(let person of team){
+  for (let key in person) {
+    console.log(`
+        ${key} : ${person[key]}
+    `);
+  }
+  console.log('----------------------------------------------');
+}
+
