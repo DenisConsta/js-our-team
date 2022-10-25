@@ -1,20 +1,30 @@
-:root{
+:root {}
 
-}
-
-.debug{
+.debug {
   border: 1px solid firebrick;
 }
 
-.main-wrapper{
+.main-wrapper {
   min-height: 100vh;
   background-color: #EBF2FA;
 }
 
-.card{
+.card {
   width: 18rem;
 }
 
-.title{
+.title {
   color: #05668D;
+}
+
+.card-top {
+  overflow: hidden;
+}
+
+.card-top img {
+  transition: 0.5s all ease-in-out;
+}
+
+.card-top img:hover  {
+  transform: scale(1.15);
 }

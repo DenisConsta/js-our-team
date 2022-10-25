@@ -46,7 +46,9 @@ function createCard(object) {
   const card = `
     <div class="col mb-5 d-flex justify-content-center ">
       <div class="card" >
-        <img class="card-img-top" src="assets/img/${object.image}" alt="Card image cap">
+        <div class="card-top">
+          <img class="card-img-top" src="assets/img/${object.image}" alt="">
+        </div>
         <div class="card-body text-center">
           <h3 class="name">${object.name}</h3>
           <h4 class="role lead">${object.role}</h4>
